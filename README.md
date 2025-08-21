@@ -53,11 +53,11 @@ The goal is not only accuracy, but also **runtime performance, feasibility, and 
 
 ### Overall Comparison  
 
-| Approach                | Training / Execution Time | Performance | Notes |
-|--------------------------|---------------------------|-------------|-------|
-| **Random Forest (Classical)** | Seconds                   | High accuracy, stable | Fast and reliable baseline |
-| **Quantum Simulation**   | Hours                     | Moderate, varied | Strongly depends on ansatz design |
-| **Quantum Hardware**     | Hours (including queue)   | Low, noisy results | Performance degraded due to hardware noise |
+| Approach                | Training / Execution Time | Performance | Notes | Accuracy |
+|--------------------------|---------------------------|-------------|-------|--------|
+| **Random Forest (Classical)** | Seconds                   | High accuracy, stable | Fast and reliable baseline | ~85% |
+| **Quantum Simulation**   | Hours                     | Moderate, varied | Strongly depends on ansatz design | ~83% |
+| **Quantum Hardware**     | Hours (including queue)   | Moderate, noisy results | Performance degraded due to hardware noise | ~78% |
 
 ---
 
@@ -65,7 +65,10 @@ The goal is not only accuracy, but also **runtime performance, feasibility, and 
 - Classical ML is currently **far more efficient and effective** for this type of structured dataset.  
 - QML remains experimental but offers an important learning opportunity to understand the challenges of designing quantum circuits.  
 - The project demonstrates the **gap between theoretical promise and practical limitations** in today’s quantum hardware.  
-- Running QML on a real device is valuable for experience, but highlights why quantum advantage is still a research goal rather than reality.  
+- Running QML on a real device is valuable for experience, but highlights why quantum advantage is still a research goal rather than reality (Except for specific fields like cryptography).
+- Shallower (fewer gates) and shorter (fewer qubits) circuits trained faster and generally performed better. More than 2 qubits and a moderate circuit depth will find diminishing returns very quickly. However, a tiny circuit also does not have enough expressivity to realise the data. 
+- The custom VQC I implemented in Pennylane only worked if temperature was added, which gives the parametrised gates a much-needed boost.
+- Pennylane is harder to implement that Qiskit
 
 ---
 
