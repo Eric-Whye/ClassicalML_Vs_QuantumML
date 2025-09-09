@@ -1,7 +1,7 @@
 # Classical vs Quantum Machine Learning on the Heart Disease Dataset  
 
 ## Project Overview  
-This project explores the comparison between **classical machine learning (ML)** and **quantum machine learning (QML)** using the [UCI Heart Disease dataset](https://www.kaggle.com/ronitf/heart-disease-uci).  
+This project explores the comparison between **classical machine learning (ML)** and **quantum machine learning (QML)** using the [UCI Heart Disease dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction).  
 
 The work was carried out as part of the **COMP47950 – Quantum Machine Learning** module at University College Dublin. The core idea was to benchmark a classical model against quantum-inspired approaches, first in simulation and then on a real quantum computer hosted by IBM.  
 
